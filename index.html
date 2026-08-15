@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arcane Dice — D6</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="header">
+      <div class="ornament">✦</div>
+      <h1>Arcane Dice</h1>
+      <p>Il destino è nelle tue mani</p>
+    </header>
+
+    <section class="dice-area" aria-label="Tiro dei dadi">
+      <div id="table" class="table">
+        <div id="dice-container" class="dice-container" aria-live="polite"></div>
+      </div>
+
+      <div class="controls">
+        <div class="counter" aria-label="Numero di dadi">
+          <button id="minus" type="button" aria-label="Diminuisci numero di dadi">−</button>
+          <span id="dice-count">1</span>
+          <button id="plus" type="button" aria-label="Aumenta numero di dadi">+</button>
+        </div>
+
+        <button id="roll-button" class="roll-button" type="button" aria-label="Lancia i dadi">
+          <span class="d6-icon">⚄</span>
+          <span>LANCIA</span>
+        </button>
+      </div>
+
+      <button id="history-button" class="history-button" type="button" aria-expanded="false">
+        <span>☰</span> STORICO DEI TIRI
+      </button>
+
+      <section id="history-panel" class="history-panel" hidden>
+        <div class="history-header">
+          <div>
+            <div class="history-title">Ultimi 10 tiri</div>
+            <div class="history-subtitle">Lo storico resta disponibile finché la pagina è aperta.</div>
+          </div>
+          <button id="clear-history" class="clear-history" type="button">Cancella</button>
+        </div>
+        <div id="history-list" class="history-list"></div>
+      </section>
+
+      <section id="result-panel" class="result-panel" aria-live="polite">
+        <div class="result-label">Risultato del tiro</div>
+        <div id="result-score" class="result-score">—</div>
+        <div id="result-breakdown" class="result-breakdown">Lancia i dadi per affidarti al destino.</div>
+      </section>
+    </section>
+
+    <footer>
+      <span>✦</span>
+      <span>Il fato non può essere domato.</span>
+      <span>✦</span>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
