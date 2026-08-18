@@ -1,32 +1,14 @@
-# Arcane Dice — D6 Fantasy
+# Arcane Dice — D6 v0.3
 
-Webapp statica per il tiro di d6 con simboli al posto dei numeri.
+Aggiornamento con modalità Re-Roll.
 
-## Regole implementate
+Dopo il primo tiro compare RE-ROLL. Premendolo, l'utente può cliccare uno o più dadi per selezionarli e poi CONFERMA RE-ROLL. Solo i dadi selezionati vengono rilanciati; il nuovo totale usa i nuovi risultati per quei dadi e mantiene invariati gli altri. Il risultato iniziale dei dadi rilanciati viene quindi ignorato.
 
-- 1 = teschio rosso = -2
-- 2 = X rossa = -1
-- 3 = X rossa = -1
-- 4 = quadrifoglio verde = +1
-- 5 = quadrifoglio verde = +1
-- 6 = corona verde scintillante = +2
+Lo storico conserva gli ultimi 10 risultati della sessione.
 
-## Come usarla
+File:
+- index.html
+- style.css
+- script.js
 
-Il modo più semplice:
-
-1. Estrai tutti i file dallo ZIP.
-2. Fai doppio clic su `index.html`.
-3. Si aprirà nel browser.
-4. Scegli il numero di dadi con `−` e `+`.
-5. Premi `LANCIA`.
-
-Non è necessario installare nulla.
-
-## Nota sui simboli
-
-La prima versione usa caratteri Unicode come segnaposto grafici. La logica è già predisposta per sostituirli in seguito con icone SVG o immagini personalizzate, cosa consigliata se vuoi un aspetto più professionale e simboli esattamente uguali a quelli del gioco.
-
-## Pubblicazione online
-
-Questa è una webapp statica: può essere pubblicata su un servizio di hosting statico come GitHub Pages, Netlify o Cloudflare Pages. Non richiede un server applicativo né un database.
+Apri index.html per provare l'app localmente oppure carica tutti e tre i file nel repository GitHub Pages.
